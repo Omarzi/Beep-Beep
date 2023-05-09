@@ -62,7 +62,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Navigator.pushReplacementNamed(context, 'login-screen');
+        Navigator.pushReplacementNamed(context, 'check-screen');
       },
     );
   }
