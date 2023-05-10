@@ -6,6 +6,7 @@ import 'package:beep_beep/features/calling_view.dart';
 import 'package:beep_beep/features/dollar_view.dart';
 import 'package:beep_beep/features/layout/presentation/views/layout_view.dart';
 import 'package:beep_beep/features/layout/presentation/views/pages/choose_reason_view.dart';
+import 'package:beep_beep/features/layout/presentation/views/sub_pages/atterdance_screen.dart';
 import 'package:beep_beep/features/layout/presentation/views/sub_pages/fawry_orders_view.dart';
 import 'package:beep_beep/features/layout/presentation/views/sub_pages/layout_view2.dart';
 import 'package:beep_beep/features/layout/presentation/views/sub_pages/settings_view.dart';
@@ -104,6 +105,12 @@ class RouteGenerator {
       case 'check-screen':
         return PageTransition(
           child: CheckView(),
+          type: PageTransitionType.fade,
+          settings: settings,
+          reverseDuration: const Duration(milliseconds: 200),
+        );case 'attendance-screen':
+        return PageTransition(
+          child: AttendanceScreen(),
           type: PageTransitionType.fade,
           settings: settings,
           reverseDuration: const Duration(milliseconds: 200),

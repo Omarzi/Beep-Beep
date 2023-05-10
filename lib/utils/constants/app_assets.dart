@@ -21,4 +21,5 @@ class AppAssets {
   static const String whatsaap = '${AppConstants.basePNGImage}/whatsapp.png';
   static const String contact = '${AppConstants.basePNGImage}/contact.png';
   static const String pic = '${AppConstants.basePNGImage}/pic.png';
+  static const String att = '${AppConstants.basePNGImage}/att.png';
 }

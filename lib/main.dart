@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:beep_beep/app/my_app.dart';
 import 'package:beep_beep/bloc_observer/bloc_observer.dart';
 import 'package:beep_beep/features/auth/data/data_provider/local/my_auth_cache.dart';
@@ -6,6 +8,9 @@ import 'package:beep_beep/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geolocator/geolocator.dart';
+
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,6 +18,7 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
   Bloc.observer = MyBlocObserver();
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
@@ -21,5 +27,9 @@ void main() async {
   ));
   await MyConfigCach.init();
   await MyAuthCache.init();
+  // while(true) {
+  //   sleep(Duration(seconds: 35));
+  //
+  // }
   runApp(const MyApp());
 }

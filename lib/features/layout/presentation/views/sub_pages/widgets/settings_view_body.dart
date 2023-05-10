@@ -107,26 +107,31 @@ class SettingsViewBody extends StatelessWidget {
               ),
             ),
             SizedBox(height: 2.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5.w),
-              child: Container(
-                width: double.infinity,
-                // height: MediaQuery.of(context),
-                padding: EdgeInsets.symmetric(vertical: 1.h),
-                decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(16.sp),
-                    border: Border.all(
-                      color: AppColors.blackColor,
-                      width: 0.8.sp,
-                    )),
-                child: Center(
-                  child: Text(
-                    'حضور وانصراف',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.blackColor,
-                      fontSize: 16.sp,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, 'attendance-screen');
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: Container(
+                  width: double.infinity,
+                  // height: MediaQuery.of(context),
+                  padding: EdgeInsets.symmetric(vertical: 1.h),
+                  decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: BorderRadius.circular(16.sp),
+                      border: Border.all(
+                        color: AppColors.blackColor,
+                        width: 0.8.sp,
+                      )),
+                  child: Center(
+                    child: Text(
+                      'حضور وانصراف',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.blackColor,
+                        fontSize: 16.sp,
+                      ),
                     ),
                   ),
                 ),

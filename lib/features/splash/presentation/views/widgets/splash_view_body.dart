@@ -1,3 +1,5 @@
+import 'package:beep_beep/features/auth/data/data_provider/local/my_config_cache.dart';
+import 'package:beep_beep/features/auth/data/data_provider/local/my_config_cache_keys.dart';
 import 'package:beep_beep/utils/constants/app_assets.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +64,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Navigator.pushReplacementNamed(context, 'check-screen');
+        if (MyConfigCach.getString(key: MyConfigCacheKeys.token) == '') {
+          Navigator.pushReplacementNamed(context, 'check-screen');
+        } else if(MyConfigCach.getString(key: MyConfigCacheKeys.token).isNotEmpty) {
+          Navigator.pushReplacementNamed(context, 'on-boarding-screen');
+        }
       },
     );
   }

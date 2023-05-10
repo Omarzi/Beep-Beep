@@ -1,7 +1,6 @@
 import 'package:beep_beep/features/layout/presentation/views/pages/now_view.dart';
 import 'package:beep_beep/features/layout/presentation/views/pages/reg_view.dart';
 import 'package:beep_beep/features/layout/presentation/views/pages/waiting_view.dart';
-import 'package:beep_beep/utils/constants/app_assets.dart';
 import 'package:beep_beep/utils/theme/colors.dart';
 import 'package:bottom_bar/bottom_bar.dart';
 import 'package:flutter/material.dart';

@@ -22,5 +22,7 @@ enum MyConfigCacheKeys {
   order_id,
   webViewPayment,
   paymentUrl,
-  name
+  name,
+  lat,
+  long,
 }

@@ -33,7 +33,8 @@ class SignUpViewBody extends StatelessWidget {
         if (state is SignupSuccessState) {
           Navigator.pushNamed(context, 'on-boarding-screen');
         } else if (state is SignupErrorState) {
-          SnackBar snackBar = const SnackBar(content: Text('عنلية انشاء حساب مرفوض'));
+          SnackBar snackBar =
+              const SnackBar(content: Text('عنلية انشاء حساب مرفوض'));
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         }
       },
@@ -70,7 +71,7 @@ class SignUpViewBody extends StatelessWidget {
                                 if (p0!.isEmpty) {
                                   return 'يرجي ادخال الاايميل';
                                 } else if (!RegExp(
-                                    "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+.[com]")
+                                        "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9+_.-]+.[com]")
                                     .hasMatch(p0)) {
                                   return 'يرجي ادخال الايميل مثل example@gmail.com';
                                 }
@@ -100,35 +101,23 @@ class SignUpViewBody extends StatelessWidget {
                               children: [
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'المحافظة',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: countryController,
                                     isObscure: false,
                                   ),
                                 ),
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {
                                       if (p0!.isEmpty) {
@@ -139,7 +128,7 @@ class SignUpViewBody extends StatelessWidget {
                                     },
                                     hintText: 'الباسورد',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: passwordController,
                                     isObscure: true,
                                   ),
@@ -160,20 +149,14 @@ class SignUpViewBody extends StatelessWidget {
                               children: [
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'العمر',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: ageController,
                                     isObscure: false,
                                   ),
@@ -181,20 +164,14 @@ class SignUpViewBody extends StatelessWidget {
                                 SizedBox(width: 10.w),
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'الاسم الثلاثي',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: nameController,
                                     isObscure: false,
                                   ),
@@ -207,20 +184,14 @@ class SignUpViewBody extends StatelessWidget {
                               children: [
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'اقرب نقطة دالة',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: nearlyAddressController,
                                     isObscure: false,
                                   ),
@@ -228,20 +199,14 @@ class SignUpViewBody extends StatelessWidget {
                                 SizedBox(width: 10.w),
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'عنوان السكن',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: addressController,
                                     isObscure: false,
                                   ),
@@ -254,40 +219,28 @@ class SignUpViewBody extends StatelessWidget {
                               children: [
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.18,
+                                      MediaQuery.of(context).size.width * 0.18,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'رقمها',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: numberOfMotosyclController,
                                     isObscure: false,
                                   ),
                                 ),
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.25,
+                                      MediaQuery.of(context).size.width * 0.25,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'نوع الدراجة',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: typeOfMotosyclController,
                                     isObscure: false,
                                   ),
@@ -295,20 +248,14 @@ class SignUpViewBody extends StatelessWidget {
                                 // SizedBox(width: 10.w),
                                 Container(
                                   width:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width * 0.32,
+                                      MediaQuery.of(context).size.width * 0.32,
                                   height:
-                                  MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height / 18,
+                                      MediaQuery.of(context).size.height / 18,
                                   child: CustomTextFormField(
                                     validator: (p0) {},
                                     hintText: 'رقم الهاتف',
                                     textInputType:
-                                    TextInputType.visiblePassword,
+                                        TextInputType.visiblePassword,
                                     controller: phoneController,
                                     isObscure: false,
                                   ),
@@ -324,43 +271,45 @@ class SignUpViewBody extends StatelessWidget {
                               ),
                             ),
                             // SizedBox(height: 5.w),
-                            if(state is SignupLoadingState)
-                              CircularProgressIndicator(color: AppColors.primaryColor),
-                            if(state is !SignupLoadingState)
-                            ElevatedButton(
-                              onPressed: () {
-                                if (signupKey.currentState!.validate()) {
-                                  BlocProvider.of<SignupCubit>(context).signup(
-                                    emailController.text,
-                                    phoneController.text,
-                                    passwordController.text,
-                                    countryController.text,
-                                    nameController.text,
-                                    int.parse(ageController.text),
-                                    addressController.text,
-                                    nearlyAddressController.text,
-                                    captinNumberController.text,
-                                    typeOfMotosyclController.text,
-                                    phoneController.text,);
-                                  // Navigator.pushNamed(context, 'login-screen');
-                                }
-                              },
-                              style: ElevatedButton.styleFrom(
-                                primary: AppColors.primaryColor,
-                                onPrimary: AppColors.blackColor,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(25.sp),
+                            if (state is SignupLoadingState)
+                              CircularProgressIndicator(
+                                  color: AppColors.primaryColor),
+                            if (state is! SignupLoadingState)
+                              ElevatedButton(
+                                onPressed: () {
+                                  if (signupKey.currentState!.validate()) {
+                                    BlocProvider.of<SignupCubit>(context)
+                                        .signup(
+                                      emailController.text,
+                                      phoneController.text,
+                                      passwordController.text,
+                                      countryController.text,
+                                      nameController.text,
+                                      int.parse(ageController.text),
+                                      addressController.text,
+                                      nearlyAddressController.text,
+                                      captinNumberController.text,
+                                      typeOfMotosyclController.text,
+                                      numberOfMotosyclController.text,
+                                    );
+                                    // Navigator.pushNamed(context, 'login-screen');
+                                  }
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  primary: AppColors.primaryColor,
+                                  onPrimary: AppColors.blackColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25.sp),
+                                  ),
+                                ),
+                                child: Text(
+                                  "تسجيل",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 15.sp,
+                                  ),
                                 ),
                               ),
-                              child: Text(
-                                "تسجيل",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 15.sp,
-                                ),
-                              ),
-                            ),
-
                           ],
                         ),
                       ),

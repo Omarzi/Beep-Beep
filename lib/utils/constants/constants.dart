@@ -8,6 +8,9 @@ class AppConstants {
 
   /// End Points
   static const login = 'auth/login';
+  static const addLocation = 'user/captin_location';
+  static const attendance = 'user/attendance';
+  static const checkout = 'user/attendance/checkout';
 
   /// Methods
   static Widget showLoadingIndicator() {

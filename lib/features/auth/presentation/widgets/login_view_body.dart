@@ -19,7 +19,6 @@ class LoginViewBody extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if(state is LoginSuccessState) {
-          BlocProvider.of<LoginCubit>(context).login(phoneController.text, passwordController.text);
           Navigator.pushNamed(context, 'on-boarding-screen');
         } else if (state is LoginErrorState) {
           SnackBar snackBar = const SnackBar(content: Text('عنلية تسجيل الدخول مرفوضة'));
@@ -121,9 +120,6 @@ class LoginViewBody extends StatelessWidget {
                                 onPressed: () {
                                   if (loginKey.currentState!.validate()) {
                                     BlocProvider.of<LoginCubit>(context).login(phoneController.text, passwordController.text);
-                                    // Navigator.pushNamed(
-                                    //     context, 'on-boarding-screen');
-                                    // Navigator.pushNamed(context, 'layout-screen');
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
